@@ -80,8 +80,8 @@
 
 
 			if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-				document.getElementById('flipclock').setAttribute("style","zoom:1.5;");
-    			document.getElementById('ShowDate').setAttribute("style","zoom:1.5;");
+				document.getElementById('flipclock').setAttribute("style","zoom:1.0;");
+    			document.getElementById('ShowDate').setAttribute("style","zoom:1.0;");
     		}
 
 
@@ -99,7 +99,7 @@
 
 			var qrcode = new QRCode("qrcode", {
 
-				text: "http://lxsamazing.gitee.io/flipclock-beautify",
+				text: "http://lxsamazing.github.io/flipclock-beautify",
 				width: 110,
 				height: 110,
 				colorDark : "#000000",
@@ -428,17 +428,32 @@
 				}
 				//按键+
 				if (e.key == '+') {
-					$("#flipclock").css({zoom: zoomRate + 3});
-					$("#ShowDate").css({zoom: zoomRate + 3});
-					zoomRate += 0.1;
-					// console.log(zoomRate);
+					if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+						$("#flipclock").css({zoom: zoomRate + 1});
+						$("#ShowDate").css({zoom: zoomRate + 1});
+						zoomRate += 0.1;
+						// console.log(zoomRate);
+					} else {
+						$("#flipclock").css({zoom: zoomRate + 3});
+						$("#ShowDate").css({zoom: zoomRate + 3});
+						zoomRate += 0.1;
+						// console.log(zoomRate);
+					}
 				}
+
 				//按键-
 				if (e.key == '-') {
-					$("#flipclock").css({zoom: zoomRate + 2.8});
-					$("#ShowDate").css({zoom: zoomRate + 2.8});
-					zoomRate -= 0.1;
-					console.log(zoomRate);
+					if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+						$("#flipclock").css({zoom: zoomRate + 0.8});
+						$("#ShowDate").css({zoom: zoomRate + 0.8});
+						zoomRate -= 0.1;
+						// console.log(zoomRate);
+					} else {
+						$("#flipclock").css({zoom: zoomRate + 2.8});
+						$("#ShowDate").css({zoom: zoomRate + 2.8});
+						zoomRate -= 0.1;
+						// console.log(zoomRate);
+					}
 				}
 			})
 
@@ -503,20 +518,33 @@
 				}
 			}
 
+			//toolbar控制时间显示放大
 			var zoomRate = 0.1;
 			var btn1 = document.getElementById('inc-button');
 			btn1.onclick = function() {
-				$("#flipclock").css({zoom: zoomRate + 3});
-				$("#ShowDate").css({zoom: zoomRate + 3});
-				zoomRate += 0.1;
+				if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+					$("#flipclock").css({zoom: zoomRate + 1});
+					$("#ShowDate").css({zoom: zoomRate + 1});
+					zoomRate += 0.1;
+				} else {
+					$("#flipclock").css({zoom: zoomRate + 3});
+					$("#ShowDate").css({zoom: zoomRate + 3});
+					zoomRate += 0.1;
+				}
 			}
 
+			//toolbar控制时间显示缩小
 			var btn4 = document.getElementById('dec-button');
 			btn4.onclick = function() {
-				$("#flipclock").css({zoom: zoomRate + 2.8});
-				$("#ShowDate").css({zoom: zoomRate + 2.8});
-				zoomRate -= 0.1;
-				console.log(zoomRate);
+				if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+					$("#flipclock").css({zoom: zoomRate + 0.8});
+					$("#ShowDate").css({zoom: zoomRate + 0.8});
+					zoomRate -= 0.1;
+				} else {
+					$("#flipclock").css({zoom: zoomRate + 2.8});
+					$("#ShowDate").css({zoom: zoomRate + 2.8});
+					zoomRate -= 0.1;
+				}
 			}
 
 			var arr = ["animate__backInDown","animate__backInLeft","animate__backInDown","animate__backInRight",
@@ -530,7 +558,7 @@
 				"animate__zoomIn", "animate__zoomInLeft", "animate__zoomInDown", "animate__zoomInRight", "animate__zoomInUp"];
 			var anntant = arr[Math.floor((Math.random() * arr.length))];
 			$("#content").addClass(anntant);
-			console.log(arr.length);
+			// console.log(arr.length);
 
 			$('.wechat').popup({
 				popup: $('.wechat-qr'),
