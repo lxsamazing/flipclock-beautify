@@ -1,0 +1,102 @@
+/*
+	Rev: 1.0
+	Author: lxsamazing
+	Date: 2021.07.12
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+
+.m-padded {
+	padding: 1.5em !important;
+}
+
+.m-fixed {
+	position: fixed !important;
+	z-index: 10 !important;
+}
+
+.m-right-bottom {
+	bottom: 0 !important;
+	right: 0 !important;
+}
+
+body {
+	display: flex;
+	text-align:center;
+	justify-content: center;
+	align-items: center;
+	/*min-height: 100vh;*/
+	background: #222;
+
+}
+
+#fullScreen {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-image:  url("https://source.unsplash.com/random/4096x2160");
+	/*background-image: url("https://source.unsplash.com/random/1920x1080");*/
+	background-size: cover;
+	opacity: 0.5;
+	z-index: -1;
+	filter: blur(5px);
+}
+
+/*多浏览器模糊滤镜支持*/
+/*.blur {
+	filter: url(blur.svg#blur); !* FireFox, Chrome, Opera *!
+
+	-webkit-filter: blur(10px); !* Chrome, Opera *!
+	-moz-filter: blur(10px);
+	-ms-filter: blur(10px);
+	filter: blur(10px);
+
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); !* IE6~IE9 *!
+}*/
+
+.clock {
+	width: auto;
+	zoom: 3;
+	z-index: 520 !important;
+}
+
+.flip-clock-dot {
+	background: #ccc;
+	/*background: #ffffff;*/
+}
+
+.flip-clock-meridium a {
+    color: #ccc;
+    /*color: #ffffff;*/
+}
+
+.myTime h1 {
+    /*font-family: "Microsoft YaHei";*/
+    font-family: "华文新魏";
+    /*font-family: "Helvetica Neue", Helvetica, sans-serif;*/
+    /*font-family: sans-serif, Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;*/
+    color: #ccc !important;
+	text-align:center !important;
+	zoom: 3 ;
+	margin: 0;
+}
+
+#box {
+	display: table;
+	position: relative;
+}
+
+#content {
+	/*color: #fff;*/
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
