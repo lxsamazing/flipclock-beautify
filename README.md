@@ -37,7 +37,7 @@
 <div></div>
 
 # 使用
-<table><tr><td width="50px" class="alignRight">按键0: &nbsp &nbsp &nbsp &nbsp</td><td width="100px">背景图片显示与隐藏;</td></tr>
+<table><tr><td width="150px" class="alignRight">按键0: &nbsp &nbsp &nbsp &nbsp</td><td width="300px">背景图片显示与隐藏;</td></tr>
 						 <tr><td class="alignRight">按键1 :&nbsp &nbsp &nbsp &nbsp</td><td>中外日期格式切换;</td></tr>
 						 <tr><td class="alignRight">按键2 :&nbsp &nbsp &nbsp &nbsp</td><td>时制切换;</td></tr>
 						 <tr><td class="alignRight">按键3 :&nbsp &nbsp &nbsp &nbsp</td><td>秒数显示与隐藏;</td></tr>
