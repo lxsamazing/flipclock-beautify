@@ -515,7 +515,7 @@
         if (flagBody == 0) {
             document.getElementById('toolBar').style.display = 'none';
 
-            //按下隐藏button后,提示toolbar成功隐藏
+            //双击屏幕,提示toolbar成功隐藏
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',
@@ -537,6 +537,23 @@
 
         } else {
                 document.getElementById('toolBar').style.display = 'block';
+	const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    // title: '显示成功！'
+                    title: '(๑*◡*๑)没想到吧, 我又回来啦'
+                })
                 flagBody = 0;
         }
     }
