@@ -419,7 +419,7 @@
                 '<tr><td class="alignRight">按键2 :&nbsp &nbsp &nbsp &nbsp</td><td>时制切换;</td></tr>' +
                 '<tr><td class="alignRight">按键3 :&nbsp &nbsp &nbsp &nbsp</td><td>秒数显示与隐藏;</td></tr>' +
                 '<tr><td class="alignRight">按键4 :&nbsp &nbsp &nbsp &nbsp</td><td>背景图片及其分辨率切换;</td></tr>' +
-                '<tr><td class="alignRight">按键5 :&nbsp &nbsp &nbsp &nbsp</td><td>底部工具栏显示与隐藏;</td></tr>' +
+                '<tr><td class="alignRight">按键5（双击屏幕） :&nbsp &nbsp &nbsp &nbsp</td><td>底部工具栏显示与隐藏;</td></tr>' +
                 '<tr><td class="alignRight">按键. :&nbsp &nbsp &nbsp &nbsp</td><td>背景图片透明度设置;</td></tr>' +
                 '<tr><td class="alignRight">按键+ :&nbsp &nbsp &nbsp &nbsp</td><td>时间显示区域放大;</td></tr>' +
                 '<tr><td class="alignRight">按键- :&nbsp &nbsp &nbsp &nbsp</td><td>日期显示区域缩小;</td></tr>' +
@@ -500,12 +500,46 @@
         Toast.fire({
         icon: 'success',
         // title: '隐藏成功！您可以通过按键5显示和隐藏工具栏。'
-        title: '∑(っ°Д°;)っ卧槽，不见了，快按5试试'
+        title: '∑(っ°Д°;)っ卧槽，不见了，快试试>>>双击屏幕或按5'
     })
 
         flagBtn3 = 1;
     }
     }
+
+    //双击屏幕显示或隐藏toolbar
+    var flagBody = 0;
+    var body = document.getElementsByTagName("body")[0];
+    body.ondblclick = function() {
+        if (flagBody == 0) {
+            document.getElementById('toolBar').style.display = 'none';
+
+            //按下隐藏button后,提示toolbar成功隐藏
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 5000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'success',
+                // title: '隐藏成功！您可以通过双击屏幕或者按键5显示和隐藏工具栏。'
+                title: '∑(っ°Д°;)っ卧槽，不见了，快试试>>>双击屏幕或按5'
+            })
+            flagBody = 1;
+
+        } else {
+                document.getElementById('toolBar').style.display = 'block';
+                flagBody = 0;
+        }
+    }
+
 
     //toolbar控制时间显示放大
     var zoomRate = 0.1;
