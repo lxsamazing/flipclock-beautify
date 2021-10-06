@@ -66,7 +66,7 @@
     var flagD = 0;
     var flagE = 0;
     var flagF = 0;
-    var blurRatio = 5;
+    var blurRatio = 2;
 
     document.addEventListener('keydown', function(e) {
         //按键1
@@ -483,6 +483,8 @@
     var btn3 = document.getElementById('button3');
     var flagBtn3 = 0;
     btn3.onclick = function() {
+
+        flagBody = 1;
         if (flagBtn3 == 0) {
         document.getElementById('toolBar').style.display = 'none';
 
@@ -503,8 +505,8 @@
         // title: '隐藏成功！您可以通过按键5显示和隐藏工具栏。'
         title: '∑(っ°Д°;)っ卧槽，不见了，快试试>>>双击屏幕或按5'
     })
-
-        flagBtn3 = 1;
+        // 没必要啊，逻辑有误
+        // flagBtn3 = 1;
     }
     }
 
@@ -535,26 +537,26 @@
             })
             flagBody = 1;
 
-        } else {
-                document.getElementById('toolBar').style.display = 'block';
-	const Toast = Swal.mixin({
-                    toast: true,
-                    position: 'top-end',
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                    }
-                })
+        } else if (flagBody == 1) {
+            document.getElementById('toolBar').style.display = 'block';
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
 
-                Toast.fire({
-                    icon: 'success',
-                    // title: '显示成功！'
-                    title: '(๑*◡*๑)没想到吧, 我又回来啦'
-                })
-                flagBody = 0;
+            Toast.fire({
+                icon: 'success',
+                // title: '显示成功！'
+                title: '(๑*◡*๑)没想到吧, 我又回来啦'
+            })
+            flagBody = 0;
         }
     }
 
@@ -563,6 +565,7 @@
     var zoomRate = 0.1;
     var btn1 = document.getElementById('inc-button');
     btn1.onclick = function() {
+        flagBody = 2;
         if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $("#flipclock").css({zoom: zoomRate + 1});
         $("#ShowDate").css({zoom: zoomRate + 1});
@@ -577,6 +580,7 @@
     //toolbar控制时间显示缩小
     var btn4 = document.getElementById('dec-button');
     btn4.onclick = function() {
+        flagBody = 2;
         if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $("#flipclock").css({zoom: zoomRate + 0.8});
         $("#ShowDate").css({zoom: zoomRate + 0.8});

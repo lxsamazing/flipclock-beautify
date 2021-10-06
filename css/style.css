@@ -1,7 +1,7 @@
 /*
-	Rev: 1.0
+	Rev: 1.1
 	Author: lxsamazing
-	Date: 2021.07.12
+	Date: 2021.10.06
 */
 
 * {
@@ -47,7 +47,7 @@ body {
 	background-size: cover;
 	opacity: 0.5;
 	z-index: -1;
-	filter: blur(5px);
+	filter: blur(2px);
 }
 
 /*多浏览器模糊滤镜支持*/
