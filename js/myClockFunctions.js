@@ -67,7 +67,7 @@
     var flagE = 0;
     var flagF = 0;
     var blurRatio = 2;
-    var routeFlag = 0;
+
     document.addEventListener('keydown', function(e) {
         //按键1
         if (e.key == '1') {
@@ -408,19 +408,9 @@
         }
     }
 
-
         //按键"/"
         if (e.key == '/') {
-            if (routeFlag == 0) {
-                window.location.href = 'https://lxsamazing.github.io/flipclock-beautify/CircleClockBlack.html';
-                routeFlag = 1;
-            } else if (routeFlag == 1) {
-                window.location.href = 'https://lxsamazing.github.io/flipclock-beautify/CircleClockWhite.html';
-                routeFlag = 2;
-            } else if (routeFlag == 2) {
-                window.location.href = 'https://lxsamazing.github.io/flipclock-beautify';
-                routeFlag = 0;
-            }
+            window.location.href = 'https://lxsamazing.github.io/flipclock-beautify/CircleClockBlack.html';
         }
 
     })

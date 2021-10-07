@@ -36,6 +36,24 @@ body.ondblclick = function() {
     }
 }
 
+var routeFlag = 0;
+document.addEventListener('keydown', function(e) {
+    //按键"/"
+    if (e.key == '/') {
+        if (routeFlag == 0) {
+            console.log(1);
+            window.location.href = 'https://lxsamazing.github.io/flipclock-beautify/CircleClockWhite.html';
+            routeFlag = 1;
+        } else if (routeFlag == 1) {
+            window.location.href = 'https://lxsamazing.github.io/flipclock-beautify';
+            routeFlag = 2;
+        } else if (routeFlag == 2) {
+            window.location.href = 'https://lxsamazing.github.io/flipclock-beautify/CircleClockBlack.html';
+            routeFlag = 0;
+        }
+    }
+})
+
 var clock = document.querySelector('#utility-clock')
 utilityClock(clock)
 
