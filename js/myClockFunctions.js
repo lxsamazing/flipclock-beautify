@@ -427,7 +427,8 @@
                 '<tr><td class="alignRight">按键2 :&nbsp &nbsp &nbsp &nbsp</td><td>时制切换;</td></tr>' +
                 '<tr><td class="alignRight">按键3 :&nbsp &nbsp &nbsp &nbsp</td><td>秒数显示与隐藏;</td></tr>' +
                 '<tr><td class="alignRight">按键4 :&nbsp &nbsp &nbsp &nbsp</td><td>背景图片及其分辨率切换;</td></tr>' +
-                '<tr><td class="alignRight">按键5（双击屏幕）:&nbsp &nbsp &nbsp &nbsp</td><td>工具栏显示与隐藏;</td></tr>' +
+                '<tr><td class="alignRight">按键5 :&nbsp &nbsp &nbsp &nbsp</td><td>工具栏显示与隐藏;</td></tr>' +
+                '<tr><td class="alignRight">双击屏幕 :&nbsp &nbsp &nbsp &nbsp</td><td>工具栏显示与隐藏;</td></tr>' +
                 '<tr><td class="alignRight">按键. :&nbsp &nbsp &nbsp &nbsp</td><td>背景图片透明度设置;</td></tr>' +
                 '<tr><td class="alignRight">按键+ :&nbsp &nbsp &nbsp &nbsp</td><td>时间显示区域放大;</td></tr>' +
                 '<tr><td class="alignRight">按键- :&nbsp &nbsp &nbsp &nbsp</td><td>日期显示区域缩小;</td></tr>' +
