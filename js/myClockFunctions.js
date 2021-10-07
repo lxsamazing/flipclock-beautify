@@ -27,6 +27,7 @@
     "按键7 :增大背景模糊"+ "\n",
     "按键8 :减小背景模糊"+ "\n",
     "按键9 :字体选择"+ "\n",
+    "按键/ :时钟样式切换"+ "\n",
     "按键F5 :网页刷新"+ "\n",
     "按键F11 :网页全屏/网页退出全屏");
 
@@ -434,6 +435,7 @@
                 '<tr><td class="alignRight">按键7 :&nbsp &nbsp &nbsp &nbsp</td><td>增大背景模糊;</td></tr>' +
                 '<tr><td class="alignRight">按键8 :&nbsp &nbsp &nbsp &nbsp</td><td>减小背景模糊;</td></tr>' +
                 '<tr><td class="alignRight">按键9 :&nbsp &nbsp &nbsp &nbsp</td><td>字体选择;</td></tr>' +
+                '<tr><td class="alignRight">按键/ :&nbsp &nbsp &nbsp &nbsp</td><td>时钟样式切换;</td></tr>' +
                 '<tr><td class="alignRight">按键F5 :&nbsp &nbsp &nbsp &nbsp</td><td>网页刷新;</td></tr>' +
                 '<tr><td class="alignRight">按键F11 :&nbsp &nbsp &nbsp &nbsp</td><td>网页全屏/网页退出全屏;</td></tr>' +
                 '</table>',
