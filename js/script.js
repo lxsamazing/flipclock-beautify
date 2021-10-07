@@ -1,3 +1,41 @@
+//进入全屏
+function enterFullScreen() {
+    var de = document.documentElement;
+    if (de.requestFullscreen) {
+        de.requestFullscreen();
+    } else if (de.mozRequestFullScreen) {
+        de.mozRequestFullScreen();
+    } else if (de.webkitRequestFullScreen) {
+        de.webkitRequestFullScreen();
+    }
+}
+//退出全屏
+function exitFullScreen() {
+    var de = document;
+    if (de.exitFullscreen) {
+        de.exitFullscreen();
+    } else if (de.mozCancelFullScreen) {
+        de.mozCancelFullScreen();
+    } else if (de.webkitCancelFullScreen) {
+        de.webkitCancelFullScreen();
+    }
+}
+
+//双击全屏与退出全屏
+var flagFullScreen = 0;
+var body = document.getElementsByTagName("body")[0];
+body.ondblclick = function() {
+    if (flagFullScreen == 0) {
+        // console.log(1);
+        enterFullScreen();
+        flagFullScreen = 1;
+    } else {
+        exitFullScreen();
+        // console.log(0);
+        flagFullScreen = 0;
+    }
+}
+
 var clock = document.querySelector('#utility-clock')
 utilityClock(clock)
 

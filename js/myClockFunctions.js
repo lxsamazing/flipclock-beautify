@@ -1,7 +1,7 @@
 /**
  * Rev: 1.1
  Author: lxsamazing
- Date: 2021.07.15
+ Date: 2021.10.06
  */
 
 
@@ -11,7 +11,7 @@
     console.log("https://github.com/lxsamazing/flipclock-beautify");
 
 
-    document.getElementById('fullScreen').style.opacity = 0.5;
+    document.getElementById('fullScreen').style.opacity = 1;
 
     console.log("欢迎来到flipclock,菜单如下：" + "\n",
     "按键0 :背景图片显示与隐藏" + "\n",
@@ -67,7 +67,7 @@
     var flagE = 0;
     var flagF = 0;
     var blurRatio = 2;
-
+    var routeFlag = 0;
     document.addEventListener('keydown', function(e) {
         //按键1
         if (e.key == '1') {
@@ -142,13 +142,13 @@
         title: '设置背景透明度',
         icon: 'question',
         input: 'range',
-        inputLabel: '默认值为0.5',
+        inputLabel: '默认值为1',
         inputAttributes: {
         min: 0,
         max: 1,
         step: 0.01,
         // autofocus: true,
-        value: 0.5
+        value: 1
     },
         inputValue: document.getElementById('fullScreen').style.opacity
     }).then((result) => {
@@ -303,48 +303,14 @@
         var i = getRandomInt(0, 3);
         switch (i) {
         case 0:
-        document.getElementById('fullScreen').style.backgroundImage = 'url("https://picsum.photos/1920/1080")';
-        break;
+            document.getElementById('fullScreen').style.backgroundImage = 'url("https://picsum.photos/4096/2160")';
+            break;
         case 1:
-        document.getElementById('fullScreen').style.backgroundImage = 'url("https://source.unsplash.com/random/1920x1080")';
-        break;
+            document.getElementById('fullScreen').style.backgroundImage = 'url("https://source.unsplash.com/random/4196x2160")';
+            break;
         case 2:
-        document.getElementById('fullScreen').style.backgroundImage = 'url("https://unsplash.it/1920/1080")';
-        break;
-    }
-
-        const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-    }
-    })
-
-        Toast.fire({
-        icon: 'success',
-        title: '当前背景图片分辨率已成功切换至1920x1080 ！'
-    })
-
-        flagE = 1;
-
-    } else {
-        var j = getRandomInt(0, 3);
-        switch (j) {
-        case 0:
-        // Can be replaced by new awesome sites.
-        document.getElementById('fullScreen').style.backgroundImage = 'url("https://picsum.photos/4096/2160")';
-        break;
-        case 1:
-        document.getElementById('fullScreen').style.backgroundImage = 'url("https://source.unsplash.com/random/4096x2160")';
-        break;
-        case 2:
-        document.getElementById('fullScreen').style.backgroundImage = 'url("https://unsplash.it/4096/2160")';
-        break;
+            document.getElementById('fullScreen').style.backgroundImage = 'url("https://unsplash.it/4196/2160")';
+            break;
     }
 
         const Toast = Swal.mixin({
@@ -362,6 +328,40 @@
         Toast.fire({
         icon: 'success',
         title: '当前背景图片分辨率已成功切换至4096x2160 ！'
+    })
+
+        flagE = 1;
+
+    } else {
+        var j = getRandomInt(0, 3);
+        switch (j) {
+        case 0:
+        // Can be replaced by new awesome sites.
+            document.getElementById('fullScreen').style.backgroundImage = 'url("https://picsum.photos/1920/1080")';
+            break;
+        case 1:
+            document.getElementById('fullScreen').style.backgroundImage = 'url("https://source.unsplash.com/random/1920x1080")';
+            break;
+        case 2:
+            document.getElementById('fullScreen').style.backgroundImage = 'url("https://unsplash.it/1920/1080")';
+            break;
+    }
+
+        const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+    })
+
+        Toast.fire({
+        icon: 'success',
+        title: '当前背景图片分辨率已成功切换至1920x1080 ！'
     })
         flagE = 0;
     }
@@ -400,13 +400,29 @@
         $("#ShowDate").css({zoom: zoomRate + 0.8});
         zoomRate -= 0.1;
         // console.log(zoomRate);
-    } else {
-        $("#flipclock").css({zoom: zoomRate + 2.8});
-        $("#ShowDate").css({zoom: zoomRate + 2.8});
-        zoomRate -= 0.1;
-        // console.log(zoomRate);
+        } else {
+            $("#flipclock").css({zoom: zoomRate + 2.8});
+            $("#ShowDate").css({zoom: zoomRate + 2.8});
+            zoomRate -= 0.1;
+            // console.log(zoomRate);
+        }
     }
-    }
+
+
+        //按键"/"
+        if (e.key == '/') {
+            if (routeFlag == 0) {
+                window.location.href = 'https://lxsamazing.github.io/flipclock-beautify/CircleClockBlack.html';
+                routeFlag = 1;
+            } else if (routeFlag == 1) {
+                window.location.href = 'https://lxsamazing.github.io/flipclock-beautify/CircleClockWhite.html';
+                routeFlag = 2;
+            } else if (routeFlag == 2) {
+                window.location.href = 'https://lxsamazing.github.io/flipclock-beautify';
+                routeFlag = 0;
+            }
+        }
+
     })
 
     // 工具栏
@@ -469,11 +485,11 @@
     var flagBtn5 = 0;
     btn5.onclick = function() {
         if (flagBtn5 == 0) {
-            console.log("1");
+            // console.log("1");
             enterFullScreen();
             flagBtn5 = 1;
         } else {
-            console.log("2");
+            // console.log("2");
             exitFullScreen();
             flagBtn5 = 0;
         }
@@ -513,6 +529,7 @@
     //双击屏幕显示或隐藏toolbar
     var flagBody = 0;
     var body = document.getElementsByTagName("body")[0];
+    console.log(body);
     body.ondblclick = function() {
         if (flagBody == 0) {
             document.getElementById('toolBar').style.display = 'none';
