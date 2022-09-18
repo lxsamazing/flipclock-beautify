@@ -47,7 +47,7 @@ body {
 	background-size: cover;
 	opacity: 1;
 	z-index: -1;
-	filter: blur(2px);
+	filter: blur(0px);
 }
 
 /*多浏览器模糊滤镜支持*/
