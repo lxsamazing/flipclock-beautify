@@ -1,7 +1,7 @@
 /*
 	Rev: 1.2
 	Author: lxsamazing
-	Date: 2021.10.07
+	Date: 2023.05.02
 */
 
 * {
@@ -42,8 +42,8 @@ body {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	/*background-image:  url("https://source.unsplash.com/random/4096x2160");*/
-	background-image: url("https://source.unsplash.com/random/1920x1080");
+	/*background-image:  url("https://picsum.photos/4096x2160");*/
+	background-image: url("https://picsum.photos/1920/1080");
 	background-size: cover;
 	opacity: 1;
 	z-index: -1;
