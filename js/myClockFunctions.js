@@ -624,7 +624,7 @@
     var dateString = d.getFullYear() + "年" +(d.getMonth() + 1) + "月" + d.getDate() + "日" + ' 星期'+'日一二三四五六'.charAt(new Date().getDay());
     var typed = new Typed('#ShowDate', {
         // strings: ["欢迎来到flipclock", "今天也要元气满满哦！", dateString],
-        strings: [https://api.suyanw.cn/api/yiyan, dateString],
+        strings: ["https://api.suyanw.cn/api/yiyan", dateString],
         // strings: ["欢迎来到flipclock", "请按下1来设置日期样式"],
         typeSpeed: 80
     });
