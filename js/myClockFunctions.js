@@ -626,8 +626,9 @@
     var typed = new Typed('#ShowDate', {
         // strings: ["欢迎来到flipclock", "今天也要元气满满哦！", dateString],
         // strings: ["欢迎来到flipclock", "请按下1来设置日期样式"],
-        fetch('https://api.suyanw.cn/api/yiyan?type=json').then(response => response.text()).then(data => console.log(data));
-        strings: ["data", dateString],
+        // fetch('https://api.suyanw.cn/api/yiyan?type=json').then(response => response.text()).then(data => console.log(data));
+        fetch('https://api.suyanw.cn/api/yiyan?type=json').then(response => response.json()).then(data => console.log(data.text));
+        strings: ["data.text", dateString],
         typeSpeed: 80
     });
 
