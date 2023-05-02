@@ -636,7 +636,7 @@
         // strings: ["欢迎来到flipclock", "今天也要元气满满哦！", dateString],
         // strings: ["欢迎来到flipclock", "请按下1来设置日期样式"],
           
-        strings: ["quote", dateString],
+        strings: [quote, dateString],
         typeSpeed: 80
     });
 
