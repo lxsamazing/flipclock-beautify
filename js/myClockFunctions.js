@@ -623,8 +623,6 @@
 
     var dateString = d.getFullYear() + "年" +(d.getMonth() + 1) + "月" + d.getDate() + "日" + ' 星期'+'日一二三四五六'.charAt(new Date().getDay());
     
-    // 导入Axios库
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>>
     // 使用Axios获取API响应
     axios.get('https://api.suyanw.cn/api/yiyan')
       .then(function (response) {
