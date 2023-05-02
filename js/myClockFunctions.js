@@ -310,7 +310,7 @@
             document.getElementById('fullScreen').style.backgroundImage = 'url("https://api.suyanw.cn/api/scenery")';
             break;
         case 2:
-            document.getElementById('fullScreen').style.backgroundImage = 'url("https://unsplash.it/4196/2160")';
+            document.getElementById('fullScreen').style.backgroundImage = 'url("https://unsplash.it/4096/2160")';
             break;
     }
 
