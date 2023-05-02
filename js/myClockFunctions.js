@@ -629,6 +629,8 @@
     .then(data => {
     // 解析数据
     const quote = data.text;
+    })
+   .catch(error => console.error(error));
 
     var typed = new Typed('#ShowDate', {
         // strings: ["欢迎来到flipclock", "今天也要元气满满哦！", dateString],
