@@ -1,7 +1,7 @@
 /**
- * Rev: 1.1
+ * Rev: 1.2
  Author: lxsamazing
- Date: 2021.10.06
+ Date: 2023.05.01
  */
 
 
@@ -307,7 +307,7 @@
             document.getElementById('fullScreen').style.backgroundImage = 'url("https://picsum.photos/4096/2160")';
             break;
         case 1:
-            document.getElementById('fullScreen').style.backgroundImage = 'url("https://source.unsplash.com/random/4196x2160")';
+            document.getElementById('fullScreen').style.backgroundImage = 'url("https://api.suyanw.cn/api/scenery")';
             break;
         case 2:
             document.getElementById('fullScreen').style.backgroundImage = 'url("https://unsplash.it/4196/2160")';
@@ -341,7 +341,7 @@
             document.getElementById('fullScreen').style.backgroundImage = 'url("https://picsum.photos/1920/1080")';
             break;
         case 1:
-            document.getElementById('fullScreen').style.backgroundImage = 'url("https://source.unsplash.com/random/1920x1080")';
+            document.getElementById('fullScreen').style.backgroundImage = 'url("https://api.suyanw.cn/api/scenery")';
             break;
         case 2:
             document.getElementById('fullScreen').style.backgroundImage = 'url("https://unsplash.it/1920/1080")';
@@ -623,7 +623,8 @@
 
     var dateString = d.getFullYear() + "年" +(d.getMonth() + 1) + "月" + d.getDate() + "日" + ' 星期'+'日一二三四五六'.charAt(new Date().getDay());
     var typed = new Typed('#ShowDate', {
-        strings: ["欢迎来到flipclock", "今天也要元气满满哦！", dateString],
+        // strings: ["欢迎来到flipclock", "今天也要元气满满哦！", dateString],
+        strings: [https://api.suyanw.cn/api/yiyan, dateString],
         // strings: ["欢迎来到flipclock", "请按下1来设置日期样式"],
         typeSpeed: 80
     });
