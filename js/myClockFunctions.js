@@ -622,22 +622,24 @@
     });
 
     var dateString = d.getFullYear() + "年" +(d.getMonth() + 1) + "月" + d.getDate() + "日" + ' 星期'+'日一二三四五六'.charAt(new Date().getDay());
-    const axios = require('axios');
-        // 调用 API
-           axios.get('https://api.suyanw.cn/api/yiyan')
-             .then(function (response) {
-            // 解析 JSON 数据并获取对应值
-             const data = JSON.parse(response.data);
-             console.log(data);
-             })
-             .catch(function (error) {
-             console.log(error);
-             });
+    
+    // 导入Axios库
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    // 使用Axios获取API响应
+    axios.get('https://api.suyanw.cn/api/yiyan')
+      .then(function (response) {
+        // API返回值处理逻辑
+        console.log(response);
+      })
+      .catch(function (error) {
+        // API错误处理逻辑
+        console.log(error);
+  });
     var typed = new Typed('#ShowDate', {
         // strings: ["欢迎来到flipclock", "今天也要元气满满哦！", dateString],
         // strings: ["欢迎来到flipclock", "请按下1来设置日期样式"],
           
-        strings: ["data", dateString],
+        strings: ["response", dateString],
         typeSpeed: 80
     });
 
