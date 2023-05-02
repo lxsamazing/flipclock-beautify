@@ -623,19 +623,20 @@
 
     var dateString = d.getFullYear() + "年" +(d.getMonth() + 1) + "月" + d.getDate() + "日" + ' 星期'+'日一二三四五六'.charAt(new Date().getDay());
     
-    // 获取 API 数据
-    fetch('https://api.suyanw.cn/api/yiyan?type=json')
-    .then(response => response.json())
-    .then(data => {
-    // 解析数据
-    const quote = data.text;
-    })
-   .catch(error => console.error(error));
+   
 
     var typed = new Typed('#ShowDate', {
         // strings: ["欢迎来到flipclock", "今天也要元气满满哦！", dateString],
         // strings: ["欢迎来到flipclock", "请按下1来设置日期样式"],
-          
+        // 获取 API 数据
+        fetch('https://api.suyanw.cn/api/yiyan?type=json')
+        .then(response => response.json())
+        .then(data => {
+        // 解析数据
+        const quote = data.text;
+        })
+       .catch(error => console.error(error));
+
         strings: [quote, dateString],
         typeSpeed: 80
     });
