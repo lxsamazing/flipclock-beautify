@@ -304,13 +304,13 @@
         var i = getRandomInt(0, 3);
         switch (i) {
         case 0:
-            document.getElementById('fullScreen').style.backgroundImage = 'url("https://picsum.photos/4096/2160")';
+            document.getElementById('fullScreen').style.backgroundImage = 'url("https://picsum.photos/3840/2160")';
             break;
         case 1:
             document.getElementById('fullScreen').style.backgroundImage = 'url("https://api.suyanw.cn/api/scenery")';
             break;
         case 2:
-            document.getElementById('fullScreen').style.backgroundImage = 'url("https://unsplash.it/4096/2160")';
+            document.getElementById('fullScreen').style.backgroundImage = 'url("https://unsplash.it/3840/2160")';
             break;
     }
 
@@ -328,7 +328,7 @@
 
         Toast.fire({
         icon: 'success',
-        title: '当前背景图片分辨率已成功切换至4096x2160 ！'
+        title: '当前背景图片分辨率已成功切换至3840x2160 ！'
     })
 
         flagE = 1;
